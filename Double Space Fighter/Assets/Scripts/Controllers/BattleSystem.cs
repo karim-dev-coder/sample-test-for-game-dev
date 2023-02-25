@@ -7,6 +7,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private List<SpaceShipController> _spaceShips;
 
     [Header("Debug")] [SerializeField] private bool _manualUpdate;
+    [SerializeField] private float _debugDt = 1;
+
     private readonly StringBuilder _lastTickLogs = new StringBuilder();
 
     private void Update()
@@ -40,11 +42,11 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        if (GUILayout.Button("Update Tick (1 sec)"))
+        if (GUILayout.Button($"Update Tick ({_debugDt} sec)"))
         {
             _lastTickLogs.Clear();
             Application.logMessageReceived += OnLogMessageReceived;
-            InternalUpdate(1);
+            InternalUpdate(_debugDt);
             Application.logMessageReceived -= OnLogMessageReceived;
         }
 

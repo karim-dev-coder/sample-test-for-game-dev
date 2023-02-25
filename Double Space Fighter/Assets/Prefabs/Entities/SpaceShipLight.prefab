@@ -31,6 +31,26 @@ PrefabInstance:
       propertyPath: _params.CountWeaponSlots
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Modules.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Weapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Modules.Array.data[1]
+      value: empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Modules.Array.data[2]
+      value: empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Weapons.Array.data[1]
+      value: empty
+      objectReference: {fileID: 0}
     - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -339,7 +339,7 @@ MonoBehaviour:
   _spaceShips:
   - {fileID: 87553018}
   - {fileID: 1349987298}
-  _manualUpdate: 1
+  _manualUpdate: 0
 --- !u!4 &122962369
 Transform:
   m_ObjectHideFlags: 0
@@ -560,6 +560,10 @@ PrefabInstance:
     - target: {fileID: 3664883781348863606, guid: 2da7c13f94e411c47b3587309f0e8993, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861011493911966239, guid: 2da7c13f94e411c47b3587309f0e8993, type: 3}
+      propertyPath: _params.Weapons.Array.data[2]
+      value: empty
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2da7c13f94e411c47b3587309f0e8993, type: 3}
