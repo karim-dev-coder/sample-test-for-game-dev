@@ -1,28 +1,31 @@
-﻿using System;
+﻿using UnityEngine;
 
 public class Health : IStat
 {
     public string Name => "Health";
-    public float Value => MaxValue - _reducedHealth;
+
+    public float Value
+    {
+        get => Mathf.Lerp(0, MaxValue, _percent);
+        private set => _percent = Mathf.InverseLerp(0, MaxValue, value);
+    }
+
     public float MaxValue => _baseMaxValue + _modifierService.GetAppliableValue<Health>();
 
     private readonly IStatModifierService _modifierService;
 
     private readonly float _baseMaxValue;
-    private float _reducedHealth;
+    private float _percent = 1;
 
     public Health(float maxValue, IStatModifierService modifierService)
     {
         _modifierService = modifierService;
         _baseMaxValue = maxValue;
-        _reducedHealth = 0;
     }
 
     public void TakeDamage(float damage)
     {
-        // Guard.
-        damage = Math.Clamp(damage, 0, Math.Abs(damage));
-        _reducedHealth += damage;
+        Value -= damage;
     }
 
     public override string ToString()
