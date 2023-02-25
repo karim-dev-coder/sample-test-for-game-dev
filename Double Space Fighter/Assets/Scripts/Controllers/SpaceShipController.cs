@@ -9,10 +9,12 @@ public class SpaceShipController : MonoBehaviour
         _model.WeaponSlots[0].Set(new SimpleWeapon(5, 3));
 
         _model.ModuleSlots[0].Set(new IncreaseHealth(30));
+    public void UpdateTick(float dt)
+    {
+        Model.Update(dt);
+        _behaviour.Update(dt);
     }
 
-    void Update()
     {
-        _model.Update(Time.deltaTime);
     }
 }
