@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public static class SpaceShipFactory
 {
@@ -20,16 +21,22 @@ public static class SpaceShipFactory
     {
         public float Health;
         public ShieldParams Shield;
-        public int CountWeaponSlots;
-        public int CountModuleSlots;
+        public List<string> Weapons;
+        public List<string> Modules;
 
         public static Params Default =>
             new()
             {
                 Health = 100,
                 Shield = new ShieldParams(100, 1),
-                CountWeaponSlots = 1,
-                CountModuleSlots = 1
+                Weapons = new List<string>
+                {
+                    EmptyWeapon.ID
+                },
+                Modules = new List<string>
+                {
+                    EmptyModule.ID
+                }
             };
     }
 
@@ -40,14 +47,18 @@ public static class SpaceShipFactory
         spaceShip.Stats.Set(new Health(param.Health, spaceShip.ModificatorService));
         spaceShip.Stats.Set(new Shield(param.Shield.Value, param.Shield.RechargeInSec));
 
-        for (var i = 0; i < param.CountWeaponSlots; i++)
+        foreach (var id in param.Weapons)
         {
             spaceShip.WeaponSlots.Add(new WeaponSlot());
+            var weapon = WeaponRepository.Create(id);
+            spaceShip.WeaponSlots[^1].Set(weapon);
         }
 
-        for (var i = 0; i < param.CountModuleSlots; i++)
+        foreach (var id in param.Modules)
         {
             spaceShip.ModuleSlots.Add(new ModuleSlot());
+            var module = ModuleRepository.Get(id);
+            spaceShip.ModuleSlots[^1].Set(module);
         }
 
         return spaceShip;
