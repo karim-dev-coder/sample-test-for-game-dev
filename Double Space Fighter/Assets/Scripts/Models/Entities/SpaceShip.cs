@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class SpaceShip : IEntity
 {
+    public string Name { get; }
+
     public List<IStat> Stats { get; } = new List<IStat>()
     {
         new Health(100),
@@ -40,5 +43,10 @@ public class SpaceShip : IEntity
     public void DealDamage(float damage)
     {
         Debug.Log($"{this} take damage '{damage}'");
+    }
+
+    public override string ToString()
+    {
+        return $"'{Name}'";
     }
 }

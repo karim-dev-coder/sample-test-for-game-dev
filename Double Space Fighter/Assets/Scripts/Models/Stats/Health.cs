@@ -9,4 +9,9 @@
     {
         _baseValue = baseValue;
     }
+
+    public override string ToString()
+    {
+        return $"{Name}: {Value} (base: {_baseValue})";
+    }
 }

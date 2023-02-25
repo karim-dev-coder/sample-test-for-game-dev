@@ -14,4 +14,9 @@
     {
         throw new System.NotImplementedException();
     }
+
+    public override string ToString()
+    {
+        return $"{Name}: {Value} (base: {_baseValue})";
+    }
 }

@@ -2,21 +2,31 @@ using UnityEngine;
 
 public class SpaceShipController : MonoBehaviour
 {
-    private readonly SpaceShip _model = new SpaceShip();
+    [SerializeField] private string _name = "Some Spaceship";
+
+    public SpaceShip Model { get; private set; }
     private AggressiveBehaviour _behaviour;
 
     void Start()
     {
-        _model.WeaponSlots[0].Set(new SimpleWeapon(5, 3));
+        Model = new SpaceShip(_name);
+
+        Model.WeaponSlots[0].Set(new SimpleWeapon(5, 3));
+
+        Model.ModuleSlots[0].Set(new IncreaseHealth(30));
         _behaviour = new AggressiveBehaviour(Model);
 
-        _model.ModuleSlots[0].Set(new IncreaseHealth(30));
+        Debug.Log($"{Model} module initialized");
+    }
+
     public void UpdateTick(float dt)
     {
         Model.Update(dt);
         _behaviour.Update(dt);
     }
 
+    public override string ToString()
     {
+        return Model.ToString();
     }
 }

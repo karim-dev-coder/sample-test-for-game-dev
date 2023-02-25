@@ -33,4 +33,9 @@ public class SimpleWeapon : IWeapon
             Cooldown -= dt;
         }
     }
+
+    public override string ToString()
+    {
+        return $"Simple (dmg: {Damage} cd: {Cooldown})";
+    }
 }
