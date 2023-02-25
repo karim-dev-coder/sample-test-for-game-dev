@@ -5,7 +5,8 @@ public static class ModuleRepository
     private static readonly Dictionary<string, IModule> _repository = new()
     {
         [EmptyModule.ID] = new EmptyModule(),
-        ["increase_50_health"] = new IncreaseHealth("increase_50_health", 50)
+        ["increase_50_health"] = new IncreaseHealth("increase_50_health", 50),
+        ["increase_50_shield"] = new IncreaseShield("increase_50_shield", 50)
     };
 
     public static IModule Get(string id)

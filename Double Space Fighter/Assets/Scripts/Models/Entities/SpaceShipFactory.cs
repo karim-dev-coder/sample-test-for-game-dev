@@ -45,7 +45,7 @@ public static class SpaceShipFactory
         var spaceShip = new SpaceShip(name);
 
         spaceShip.Stats.Set(new Health(param.Health, spaceShip.ModificatorService));
-        spaceShip.Stats.Set(new Shield(param.Shield.Value, param.Shield.RechargeInSec));
+        spaceShip.Stats.Set(new Shield(param.Shield.Value, param.Shield.RechargeInSec, spaceShip.ModificatorService));
 
         foreach (var id in param.Weapons)
         {
