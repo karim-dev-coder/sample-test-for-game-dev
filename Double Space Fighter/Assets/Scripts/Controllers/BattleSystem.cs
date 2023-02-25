@@ -25,7 +25,12 @@ public class BattleSystem : MonoBehaviour
     {
         foreach (var ship in _spaceShips)
         {
-            ship.UpdateTick(dt);
+            ship.BehaviourUpdateTick(dt);
+        }
+
+        foreach (var ship in _spaceShips)
+        {
+            ship.ModelUpdateTick(dt);
         }
     }
 

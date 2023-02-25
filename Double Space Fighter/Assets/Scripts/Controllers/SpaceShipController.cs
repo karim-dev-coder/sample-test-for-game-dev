@@ -6,12 +6,12 @@ public class SpaceShipController : MonoBehaviour
     [SerializeField] private SpaceShipFactory.Params _params = SpaceShipFactory.Params.Default;
 
     public SpaceShip Model { get; private set; }
-    private AggressiveBehaviour _behaviour;
+    public AggressiveBehaviour Behaviour { get; private set; }
 
     void Start()
     {
         Model = SpaceShipFactory.Create(_name, _params);
-        _behaviour = new AggressiveBehaviour(Model);
+        Behaviour = new AggressiveBehaviour(Model);
 
         Model.WeaponSlots[0].Set(WeaponRepository.Get("weapon_5_dmg_3_cd"));
         Model.ModuleSlots[0].Set(ModuleRepository.Get("increase_50_health"));
@@ -19,10 +19,14 @@ public class SpaceShipController : MonoBehaviour
         Debug.Log($"{Model} module initialized");
     }
 
-    public void UpdateTick(float dt)
+    public void BehaviourUpdateTick(float dt)
+    {
+        Behaviour.Update(dt);
+    }
+
+    public void ModelUpdateTick(float dt)
     {
         Model.Update(dt);
-        _behaviour.Update(dt);
     }
 
     public override string ToString()
