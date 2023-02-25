@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-public class SpaceShip
+public class SpaceShip : IEntity
 {
     public List<IStat> Stats { get; } = new List<IStat>()
     {
@@ -35,5 +35,10 @@ public class SpaceShip
                 updatableStat.Update(dt);
             }
         }
+    }
+
+    public void DealDamage(float damage)
+    {
+        Debug.Log($"{this} take damage '{damage}'");
     }
 }
