@@ -21,25 +21,13 @@ public class SpaceShip
         new ModuleSlot()
     };
 
-    private readonly AggressiveBehaviour _behaviour;
-
-    public SpaceShip()
+    public SpaceShip(string name)
     {
-        _behaviour = new AggressiveBehaviour(this);
-    }
-
-    public void ShootIfCan(IEntity target)
-    {
-        foreach (var weapon in Weapons.Where(weapon => weapon.CanShoot()))
-        {
-            weapon.Shoot(target);
-        }
+        Name = name;
     }
 
     public void Update(float dt)
     {
-        _behaviour.Update(dt);
-
         foreach (var stat in Stats)
         {
             if (stat is IUpdatableStat updatableStat)
