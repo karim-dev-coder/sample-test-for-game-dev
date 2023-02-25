@@ -35,4 +35,22 @@ public class SelectWeaponWidget : UIBehaviour
 
         _dropdown.value = selectedValueOption;
     }
+
+    protected override void OnEnable()
+    {
+        _dropdown.onValueChanged.AddListener(OnValueChanged);
+    }
+
+    protected override void OnDisable()
+    {
+        _dropdown.onValueChanged.RemoveListener(OnValueChanged);
+    }
+
+    private void OnValueChanged(int valueOption)
+    {
+        var id = _optionValueToWeaponId[valueOption];
+        var weapon = WeaponRepository.Create(id);
+
+        _spaceShip.Model.WeaponSlots[_weaponIndex].Set(weapon);
+    }
 }

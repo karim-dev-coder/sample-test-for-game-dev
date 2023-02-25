@@ -35,4 +35,22 @@ public class SelectModuleWidget : UIBehaviour
 
         _dropdown.value = selectedValueOption;
     }
+
+    protected override void OnEnable()
+    {
+        _dropdown.onValueChanged.AddListener(OnValueChanged);
+    }
+
+    protected override void OnDisable()
+    {
+        _dropdown.onValueChanged.RemoveListener(OnValueChanged);
+    }
+
+    private void OnValueChanged(int valueOption)
+    {
+        var id = _optionValueToModuleId[valueOption];
+        var module = ModuleRepository.Get(id);
+
+        _spaceShip.Model.ModuleSlots[_moduleIndex].Set(module);
+    }
 }
