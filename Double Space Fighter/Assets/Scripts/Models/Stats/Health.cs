@@ -7,7 +7,11 @@ public class Health : IStat
     public float Value
     {
         get => Mathf.Lerp(0, MaxValue, _percent);
-        private set => _percent = Mathf.InverseLerp(0, MaxValue, value);
+        private set
+        {
+            var clamped = Mathf.Clamp(value, 0, MaxValue);
+            _percent = Mathf.InverseLerp(0, MaxValue, clamped);
+        }
     }
 
     public float MaxValue => _baseMaxValue + _modifierService.GetAppliableValue<Health>();

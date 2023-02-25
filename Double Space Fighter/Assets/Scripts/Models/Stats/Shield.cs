@@ -8,7 +8,11 @@ public class Shield : IUpdatableStat
     public float Value
     {
         get => Mathf.Lerp(0, MaxValue, _percent);
-        private set => _percent = Mathf.InverseLerp(0, MaxValue, value);
+        private set
+        {
+            var clamped = Mathf.Clamp(value, 0, MaxValue);
+            _percent = Mathf.InverseLerp(0, MaxValue, clamped);
+        }
     }
 
     public float MaxValue => _baseMaxValue + _modifierService.GetAppliableValue<Shield>();
@@ -29,7 +33,10 @@ public class Shield : IUpdatableStat
 
     public void Update(float dt, IStatModifierService modifierService)
     {
-        var rechargeValue = dt * (RechargeInSec * (1 + modifierService.GetAppliableModifierValue<IncreaseShieldRecharge>()));
+        var rechargeInSec = _baseMaxValue * modifierService.GetAppliableModifierValue<IncreaseShieldRecharge>();
+        rechargeInSec = Math.Clamp(rechargeInSec, 1, _baseMaxValue);
+
+        var rechargeValue = dt * rechargeInSec;
         Value += rechargeValue;
     }
 
