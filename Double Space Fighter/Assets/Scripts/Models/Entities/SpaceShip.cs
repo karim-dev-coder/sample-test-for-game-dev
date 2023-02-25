@@ -6,11 +6,7 @@ public class SpaceShip : IEntity
 {
     public string Name { get; }
 
-    public List<IStat> Stats { get; } = new List<IStat>()
-    {
-        new Health(100),
-        new Shield(80)
-    };
+    public List<IStat> Stats { get; } = new();
     public List<WeaponSlot> WeaponSlots { get; } = new();
     public List<ModuleSlot> ModuleSlots { get; } = new();
 

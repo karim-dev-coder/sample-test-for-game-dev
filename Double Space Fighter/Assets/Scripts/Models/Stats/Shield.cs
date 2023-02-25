@@ -5,14 +5,13 @@
 
     private float _baseValue;
 
-    public Shield(float baseValue)
+    public Shield(float baseValue, float rechargeInSec)
     {
         _baseValue = baseValue;
     }
 
     public void Update(double dt)
     {
-        throw new System.NotImplementedException();
     }
 
     public override string ToString()
