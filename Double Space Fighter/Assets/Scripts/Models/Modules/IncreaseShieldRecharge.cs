@@ -16,6 +16,6 @@
 
     public override string ToString()
     {
-        return $"-{_increaseRechargePercent * 100}% shield recharge";
+        return $"+{_increaseRechargePercent * 100}% shield recharge";
     }
 }
