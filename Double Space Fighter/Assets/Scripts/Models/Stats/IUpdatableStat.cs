@@ -1,4 +1,4 @@
 ﻿public interface IUpdatableStat : IStat
 {
-    void Update(float dt);
+    void Update(float dt, IStatModifierService modifierService);
 }

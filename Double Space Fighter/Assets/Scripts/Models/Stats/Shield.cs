@@ -27,9 +27,9 @@ public class Shield : IUpdatableStat
         _baseMaxValue = baseMaxValue;
     }
 
-    public void Update(float dt)
+    public void Update(float dt, IStatModifierService modifierService)
     {
-        var rechargeValue = RechargeInSec * dt;
+        var rechargeValue = dt * (RechargeInSec * (1 + modifierService.GetAppliableModifierValue<IncreaseShieldRecharge>()));
         Value += rechargeValue;
     }
 

@@ -25,7 +25,7 @@ public class SpaceShip : IEntity
         {
             if (stat is IUpdatableStat updatableStat)
             {
-                updatableStat.Update(dt);
+                updatableStat.Update(dt, ModificatorService);
             }
         }
 

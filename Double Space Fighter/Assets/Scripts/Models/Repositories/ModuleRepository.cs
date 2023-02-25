@@ -7,7 +7,10 @@ public static class ModuleRepository
         [EmptyModule.ID] = new EmptyModule(),
         ["increase_50_health"] = new IncreaseHealth("increase_50_health", 50),
         ["increase_50_shield"] = new IncreaseShield("increase_50_shield", 50),
-        ["decrease_20_percent_weapon_cooldown"] = new WeaponCooldownReduce("decrease_20_percent_weapon_cooldown", 0.9f),
+        ["decrease_20_percent_weapon_cooldown"] = new WeaponCooldownReduce("decrease_20_percent_weapon_cooldown", 0.2f),
+        ["increase_20_percent_shield_recharge"] = new IncreaseShieldRecharge("increase_20_percent_shield_recharge", 0.2f),
+        ["decrease_90_percent_weapon_cooldown"] = new WeaponCooldownReduce("decrease_90_percent_weapon_cooldown", 0.9f),
+        ["increase_90_percent_shield_recharge"] = new IncreaseShieldRecharge("increase_90_percent_shield_recharge", 0.9f)
     };
 
     public static IModule Get(string id)
