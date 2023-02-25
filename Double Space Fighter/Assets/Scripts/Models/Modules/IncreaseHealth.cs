@@ -11,6 +11,6 @@
 
     public override string ToString()
     {
-        return $"Increase {_increaseValue} Health";
+        return $"+{_increaseValue} Health";
     }
 }

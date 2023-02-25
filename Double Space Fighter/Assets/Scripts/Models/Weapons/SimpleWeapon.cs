@@ -38,6 +38,11 @@ public class SimpleWeapon : IWeapon
 
     public override string ToString()
     {
-        return $"Simple (dmg: {Damage} cd: {Cooldown})";
+        if (Cooldown > 0)
+        {
+            return $"Weapon: Reload '{Cooldown}' (dmg: {Damage})";
+        }
+
+        return $"Weapon: {Damage} (cd: {_baseCooldown})";
     }
 }

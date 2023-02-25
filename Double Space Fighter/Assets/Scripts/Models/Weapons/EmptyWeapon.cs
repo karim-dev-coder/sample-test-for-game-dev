@@ -24,6 +24,6 @@
 
     public override string ToString()
     {
-        return "Empty";
+        return "Empty weapon";
     }
 }

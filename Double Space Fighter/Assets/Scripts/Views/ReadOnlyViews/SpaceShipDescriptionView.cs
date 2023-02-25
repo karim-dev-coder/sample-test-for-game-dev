@@ -14,7 +14,7 @@ public class SpaceShipDescriptionView : UIBehaviour
     {
         _descriptionSb.Clear();
 
-        _descriptionSb.AppendLine(_spaceShip.Model.Name);
+        _descriptionSb.AppendLine($"{_spaceShip.Model.Name} (Target: {_spaceShip.Behaviour.Target})");
         foreach (var stat in _spaceShip.Model.Stats)
         {
             _descriptionSb.AppendLine(stat.ToString());
@@ -22,14 +22,12 @@ public class SpaceShipDescriptionView : UIBehaviour
 
         foreach (var slot in _spaceShip.Model.WeaponSlots)
         {
-            var label = $"Weapon: {slot.Weapon}";
-            _descriptionSb.AppendLine(label);
+            _descriptionSb.AppendLine(slot.Weapon.ToString());
         }
 
         foreach (var slot in _spaceShip.Model.ModuleSlots)
         {
-            var label = $"Module: {slot.Module}";
-            _descriptionSb.AppendLine(label);
+            _descriptionSb.AppendLine(slot.Module.ToString());
         }
 
         _text.text = _descriptionSb.ToString();
