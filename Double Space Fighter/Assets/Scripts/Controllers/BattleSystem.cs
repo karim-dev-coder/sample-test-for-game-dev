@@ -10,9 +10,15 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private float _debugDt = 1;
 
     private readonly StringBuilder _lastTickLogs = new StringBuilder();
+    private bool _isGameOver;
 
     private void Update()
     {
+        if (_isGameOver)
+        {
+            return;
+        }
+
         if (_manualUpdate)
         {
             return;
@@ -32,6 +38,15 @@ public class BattleSystem : MonoBehaviour
         foreach (var ship in _spaceShips)
         {
             ship.ModelUpdateTick(dt);
+        }
+
+        foreach (var ship in _spaceShips)
+        {
+            if (ship.Model.Stats.Health.Value <= 0)
+            {
+                Debug.Log($"{ship} has been destroyed");
+                _isGameOver = true;
+            }
         }
     }
 
