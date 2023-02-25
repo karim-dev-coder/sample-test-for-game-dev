@@ -41,7 +41,23 @@ public class SpaceShip : IEntity
     public void DealDamage(float damage)
     {
         Debug.Log($"{this} take damage '{damage}'");
-        Stats.Health.TakeDamage(damage);
+
+        var oldShield = Stats.Shield.Value;
+        var oldHealth = Stats.Health.Value;
+
+        var reducedDamage = Stats.Shield.ReduceDamage(damage);
+        Stats.Health.TakeDamage(reducedDamage);
+
+        if (reducedDamage < damage) Debug.Log($"{this}: Shield reduce '{damage - reducedDamage}' damage");
+        if (reducedDamage == damage)
+            Debug.Log($"{this}: Shield does not reduce damage");
+        if (oldShield > Stats.Shield.Value)
+            Debug.Log($"{this}: Shield -{oldShield - Stats.Shield.Value}");
+
+        if (oldHealth > Stats.Health.Value)
+            Debug.Log($"{this}: Health -{oldHealth - Stats.Health.Value}");
+        if (oldHealth == Stats.Health.Value)
+            Debug.Log($"{this}: Health does not changed");
     }
 
     public override string ToString()

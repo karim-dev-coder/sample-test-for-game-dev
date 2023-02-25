@@ -3,6 +3,7 @@
 public class StatsCollection
 {
     public Health Health => (Health) _stats[nameof(Health)];
+    public Shield Shield => (Shield) _stats[nameof(Shield)];
 
     private readonly Dictionary<string, IStat> _stats = new();
 
