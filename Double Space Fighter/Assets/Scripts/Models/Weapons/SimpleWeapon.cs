@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class SimpleWeapon : IWeapon
+public class SimpleWeapon : IWeapon, IHaveCooldown
 {
     public string Id { get; }
     public float Damage => _baseDamage;
@@ -29,11 +29,14 @@ public class SimpleWeapon : IWeapon
 
     public void Update(float dt)
     {
-        Math.Clamp(Cooldown, 0, Math.Abs(Cooldown));
         if (Cooldown > 0)
         {
             Cooldown -= dt;
         }
+
+        Cooldown = Math.Clamp(Cooldown, 0, Math.Abs(Cooldown));
+    }
+
     }
 
     public override string ToString()

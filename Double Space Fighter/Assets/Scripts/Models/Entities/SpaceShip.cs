@@ -26,6 +26,14 @@ public class SpaceShip : IEntity
                 updatableStat.Update(dt);
             }
         }
+
+        foreach (var weapon in Weapons)
+        {
+            if (weapon is IHaveCooldown cooldownWeapon)
+            {
+                cooldownWeapon.Update(dt);
+            }
+        }
     }
 
     public void DealDamage(float damage)

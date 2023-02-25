@@ -4,7 +4,6 @@
     public string Id { get; } = ID;
 
     public float Damage => 0;
-    public float Cooldown => 0;
 
 
     public bool CanShoot()
