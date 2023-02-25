@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
+      propertyPath: _name
+      value: Dark Equilibrium
+      objectReference: {fileID: 0}
     - target: {fileID: 6491547259299967555, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
       propertyPath: m_Sprite
       value: 
