@@ -20,9 +20,15 @@ public class SpaceShipDescriptionView : UIBehaviour
             _descriptionSb.AppendLine(stat.ToString());
         }
 
-        foreach (var moduleSlot in _spaceShip.Model.ModuleSlots)
+        foreach (var slot in _spaceShip.Model.WeaponSlots)
         {
-            var label = $"Module: {moduleSlot.Module}";
+            var label = $"Weapon: {slot.Weapon}";
+            _descriptionSb.AppendLine(label);
+        }
+
+        foreach (var slot in _spaceShip.Model.ModuleSlots)
+        {
+            var label = $"Module: {slot.Module}";
             _descriptionSb.AppendLine(label);
         }
 
