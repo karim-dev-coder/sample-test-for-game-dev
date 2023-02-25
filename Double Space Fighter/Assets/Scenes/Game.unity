@@ -123,37 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &57120530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 57120531}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &57120531
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57120530}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &87553017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -277,7 +246,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1185637113
 PrefabInstance:
@@ -717,7 +686,7 @@ RectTransform:
   m_Children:
   - {fileID: 1203912490}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -873,7 +842,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &2060727524 stripped
 RectTransform:
@@ -889,7 +858,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1740980340399464960, guid: 4c9c4c2389c1b8f409f1e001d407bc0d, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1740980340399464960, guid: 4c9c4c2389c1b8f409f1e001d407bc0d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -936,8 +905,16 @@ PrefabInstance:
       value: SpaceShipDark
       objectReference: {fileID: 0}
     - target: {fileID: 2260927391415402089, guid: 4c9c4c2389c1b8f409f1e001d407bc0d, type: 3}
+      propertyPath: _name
+      value: Dark Centaur
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260927391415402089, guid: 4c9c4c2389c1b8f409f1e001d407bc0d, type: 3}
       propertyPath: _params.Weapons.Array.data[0]
       value: weapon_5_dmg_3_cd
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260927391415402089, guid: 4c9c4c2389c1b8f409f1e001d407bc0d, type: 3}
+      propertyPath: _params.Weapons.Array.data[1]
+      value: empty
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c9c4c2389c1b8f409f1e001d407bc0d, type: 3}
