@@ -1,99 +1,87 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &734267815636522181
+--- !u!1001 &6254385688517902304
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4101913745627282096, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_Name
-      value: SpaceShipDark
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101913745627282099, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: _name
-      value: Dark Centaur
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: _params.Shield.Value
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: _params.CountModuleSlots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: _params.CountWeaponSlots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: _params.Modules.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: _params.Weapons.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: _params.Modules.Array.data[1]
-      value: empty
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: _params.Weapons.Array.data[1]
-      value: empty
-      objectReference: {fileID: 0}
-    - target: {fileID: 6491547259299967555, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
+    - target: {fileID: 3179340983415100688, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b747ce48db37637498bbd59df4b558de, type: 3}
-    - target: {fileID: 7413685220306945924, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Health
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Shield.Value
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Modules.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Weapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Modules.Array.data[1]
+      value: empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Weapons.Array.data[1]
+      value: empty
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685019102101872099, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: m_Name
+      value: SpaceShipDark
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
