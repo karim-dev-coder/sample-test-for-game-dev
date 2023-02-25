@@ -12,13 +12,9 @@ public class SpaceShip : IEntity
         new Shield(80)
     };
     public List<WeaponSlot> WeaponSlots { get; } = new();
+    public List<ModuleSlot> ModuleSlots { get; } = new();
 
     public IEnumerable<IWeapon> Weapons => WeaponSlots.OfType<WeaponSlot>().Select(slot => slot.Weapon);
-
-    public readonly List<ModuleSlot> ModuleSlots = new List<ModuleSlot>()
-    {
-        new ModuleSlot()
-    };
 
     public SpaceShip(string name)
     {
