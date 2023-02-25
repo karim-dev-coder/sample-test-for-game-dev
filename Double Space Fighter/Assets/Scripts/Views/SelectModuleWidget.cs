@@ -48,6 +48,9 @@ public class SelectModuleWidget : UIBehaviour
 
     private void OnValueChanged(int valueOption)
     {
+        if (!_spaceShip || _spaceShip.Model == null)
+            return;
+
         var id = _optionValueToModuleId[valueOption];
         var module = ModuleRepository.Get(id);
 
