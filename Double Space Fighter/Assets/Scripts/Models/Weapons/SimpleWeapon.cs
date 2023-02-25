@@ -27,11 +27,12 @@ public class SimpleWeapon : IWeapon, IHaveCooldown
         Cooldown = _baseCooldown;
     }
 
-    public void Update(float dt)
+    public void Update(float dt, IStatModifierService modifierService)
     {
         if (Cooldown > 0)
         {
-            Cooldown -= dt;
+            var reducePercent = modifierService.GetAppliableModifierValue<WeaponCooldownReduce>();
+            Cooldown -= dt * (1 + reducePercent);
         }
 
         Cooldown = Math.Clamp(Cooldown, 0, Math.Abs(Cooldown));

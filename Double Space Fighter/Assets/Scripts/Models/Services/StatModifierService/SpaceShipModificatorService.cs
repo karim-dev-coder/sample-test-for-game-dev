@@ -18,4 +18,14 @@ public class SpaceShipModificatorService : IStatModifierService
 
         return applicableValue;
     }
+
+    public float GetAppliableModifierValue<TStatModifier>() where TStatModifier : IStatModifier
+    {
+        var applicableValue = _spaceShip.ModuleSlots
+            .Select(slot => slot.Module)
+            .OfType<TStatModifier>()
+            .Sum(modifier => modifier.GetApplicatorValue());
+
+        return applicableValue;
+    }
 }

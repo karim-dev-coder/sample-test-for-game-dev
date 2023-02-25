@@ -2,3 +2,8 @@
 {
     float GetApplicatorValue();
 }
+
+public interface IStatModifier
+{
+    float GetApplicatorValue();
+}

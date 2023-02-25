@@ -33,7 +33,7 @@ public class SpaceShip : IEntity
         {
             if (weapon is IHaveCooldown cooldownWeapon)
             {
-                cooldownWeapon.Update(dt);
+                cooldownWeapon.Update(dt, ModificatorService);
             }
         }
     }
