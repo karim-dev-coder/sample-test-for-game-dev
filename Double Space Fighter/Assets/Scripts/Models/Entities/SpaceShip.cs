@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpaceShip : IEntity
 {
     public string Name { get; }
+    public SpaceShipModificatorService ModificatorService { get; }
 
     public StatsCollection Stats { get; } = new();
     public List<WeaponSlot> WeaponSlots { get; } = new();
@@ -15,6 +16,7 @@ public class SpaceShip : IEntity
     public SpaceShip(string name)
     {
         Name = name;
+        ModificatorService = new SpaceShipModificatorService(this);
     }
 
     public void Update(float dt)
