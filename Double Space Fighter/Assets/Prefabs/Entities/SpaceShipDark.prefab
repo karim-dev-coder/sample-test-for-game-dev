@@ -57,7 +57,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
       propertyPath: _name
-      value: Dark Equilibrium
+      value: Dark Centaur
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
+      propertyPath: _params.Shield.Value
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
+      propertyPath: _params.CountModuleSlots
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586271697976878810, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
+      propertyPath: _params.CountWeaponSlots
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6491547259299967555, guid: a6367178ce8112343a1c47c207187ad4, type: 3}
       propertyPath: m_Sprite

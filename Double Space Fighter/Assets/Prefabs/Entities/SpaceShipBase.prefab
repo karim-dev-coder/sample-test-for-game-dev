@@ -129,6 +129,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a59b578d3399340941688748e798d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: Some Spaceship
+  _params:
+    Health: 100
+    Shield:
+      Value: 100
+      RechargeInSec: 1
+    CountWeaponSlots: 1
+    CountModuleSlots: 1
 --- !u!1 &5685019102708565254
 GameObject:
   m_ObjectHideFlags: 0

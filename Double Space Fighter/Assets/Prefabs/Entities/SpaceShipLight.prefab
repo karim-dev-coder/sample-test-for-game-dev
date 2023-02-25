@@ -15,6 +15,22 @@ PrefabInstance:
       propertyPath: _name
       value: Light Saber
       objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Health
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.Shield.Value
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.CountModuleSlots
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308732265153855881, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
+      propertyPath: _params.CountWeaponSlots
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5685019102101872096, guid: f0361436edd965d46a7e1d26cd17b626, type: 3}
       propertyPath: m_RootOrder
       value: 0
