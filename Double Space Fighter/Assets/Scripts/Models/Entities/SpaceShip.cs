@@ -6,7 +6,7 @@ public class SpaceShip : IEntity
 {
     public string Name { get; }
 
-    public List<IStat> Stats { get; } = new();
+    public StatsCollection Stats { get; } = new();
     public List<WeaponSlot> WeaponSlots { get; } = new();
     public List<ModuleSlot> ModuleSlots { get; } = new();
 
@@ -31,6 +31,7 @@ public class SpaceShip : IEntity
     public void DealDamage(float damage)
     {
         Debug.Log($"{this} take damage '{damage}'");
+        Stats.Health.TakeDamage(damage);
     }
 
     public override string ToString()

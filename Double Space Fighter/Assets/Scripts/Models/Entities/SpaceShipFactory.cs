@@ -37,8 +37,8 @@ public static class SpaceShipFactory
     {
         var spaceShip = new SpaceShip(name);
 
-        spaceShip.Stats.Add(new Health(param.Health));
-        spaceShip.Stats.Add(new Shield(param.Shield.Value, param.Shield.RechargeInSec));
+        spaceShip.Stats.Set(new Health(param.Health));
+        spaceShip.Stats.Set(new Shield(param.Shield.Value, param.Shield.RechargeInSec));
 
         for (var i = 0; i < param.CountWeaponSlots; i++)
         {

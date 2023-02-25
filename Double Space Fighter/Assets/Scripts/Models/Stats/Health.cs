@@ -1,17 +1,28 @@
-﻿public class Health : IStat
+﻿using System;
+
+public class Health : IStat
 {
     public string Name => "Health";
-    public float Value => _baseValue;
+    public float Value => _currentValue;
 
-    private readonly float _baseValue;
+    private readonly float _maxValue;
+    private float _currentValue;
 
-    public Health(float baseValue)
+    public Health(float maxValue)
     {
-        _baseValue = baseValue;
+        _maxValue = maxValue;
+        _currentValue = maxValue;
+    }
+
+    public void TakeDamage(float damage)
+    {
+        // Guard.
+        damage = Math.Clamp(damage, 0, Math.Abs(damage));
+        _currentValue -= damage;
     }
 
     public override string ToString()
     {
-        return $"{Name}: {Value} (base: {_baseValue})";
+        return $"{Name}: {Value} (max: {_maxValue})";
     }
 }
