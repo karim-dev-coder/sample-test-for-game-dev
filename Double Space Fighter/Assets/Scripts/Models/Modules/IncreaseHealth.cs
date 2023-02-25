@@ -1,4 +1,4 @@
-﻿public class IncreaseHealth : IModule
+﻿public class IncreaseHealth : IModule, IStatModifier<Health>
 {
     public string Id { get; }
     private readonly float _increaseValue;
@@ -7,6 +7,11 @@
     {
         Id = id;
         _increaseValue = increaseValue;
+    }
+
+    public float GetApplicatorValue()
+    {
+        return _increaseValue;
     }
 
     public override string ToString()
