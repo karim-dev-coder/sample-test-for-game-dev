@@ -1,4 +1,6 @@
-﻿public interface IWeapon
+﻿using System;
+
+public interface IWeapon : ICloneable
 {
     public string Id { get; }
     public float Damage { get; }

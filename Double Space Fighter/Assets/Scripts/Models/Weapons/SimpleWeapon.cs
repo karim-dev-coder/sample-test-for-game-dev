@@ -37,6 +37,9 @@ public class SimpleWeapon : IWeapon, IHaveCooldown
         Cooldown = Math.Clamp(Cooldown, 0, Math.Abs(Cooldown));
     }
 
+    public object Clone()
+    {
+        return MemberwiseClone();
     }
 
     public override string ToString()

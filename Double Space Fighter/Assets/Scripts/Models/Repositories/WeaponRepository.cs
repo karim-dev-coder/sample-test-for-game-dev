@@ -8,9 +8,9 @@ public static class WeaponRepository
         ["weapon_5_dmg_3_cd"] = new SimpleWeapon("weapon_5_dmg_3_cd", 5, 3)
     };
 
-    public static IWeapon Get(string id)
+    public static IWeapon Create(string id)
     {
-        return _repository[id];
+        return (IWeapon) _repository[id].Clone();
     }
 
     public static string GetName(string id)

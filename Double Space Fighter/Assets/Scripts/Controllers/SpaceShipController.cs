@@ -13,7 +13,7 @@ public class SpaceShipController : MonoBehaviour
         Model = SpaceShipFactory.Create(_name, _params);
         Behaviour = new AggressiveBehaviour(Model);
 
-        Model.WeaponSlots[0].Set(WeaponRepository.Get("weapon_5_dmg_3_cd"));
+        Model.WeaponSlots[0].Set(WeaponRepository.Create("weapon_5_dmg_3_cd"));
         Model.ModuleSlots[0].Set(ModuleRepository.Get("increase_50_health"));
 
         Debug.Log($"{Model} module initialized");

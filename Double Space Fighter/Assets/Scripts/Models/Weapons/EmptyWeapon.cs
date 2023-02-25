@@ -16,9 +16,9 @@
         return;
     }
 
-    public void Update(float dt)
+    public object Clone()
     {
-        return;
+        return this;
     }
 
     public override string ToString()
