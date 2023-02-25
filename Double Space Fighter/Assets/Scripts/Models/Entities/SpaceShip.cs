@@ -11,13 +11,9 @@ public class SpaceShip : IEntity
         new Health(100),
         new Shield(80)
     };
+    public List<WeaponSlot> WeaponSlots { get; } = new();
 
     public IEnumerable<IWeapon> Weapons => WeaponSlots.OfType<WeaponSlot>().Select(slot => slot.Weapon);
-
-    public readonly List<WeaponSlot> WeaponSlots = new List<WeaponSlot>()
-    {
-        new WeaponSlot()
-    };
 
     public readonly List<ModuleSlot> ModuleSlots = new List<ModuleSlot>()
     {

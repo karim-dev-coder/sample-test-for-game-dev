@@ -2,14 +2,16 @@
 
 public class SimpleWeapon : IWeapon
 {
+    public string Id { get; }
     public float Damage => _baseDamage;
     public float Cooldown { get; private set; }
 
     private readonly float _baseCooldown;
     private readonly float _baseDamage;
 
-    public SimpleWeapon(float damage, float cooldown)
+    public SimpleWeapon(string id, float damage, float cooldown)
     {
+        Id = id;
         _baseDamage = damage;
         _baseCooldown = cooldown;
     }
