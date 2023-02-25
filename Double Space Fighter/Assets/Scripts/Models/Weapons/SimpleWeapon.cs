@@ -21,18 +21,20 @@ public class SimpleWeapon : IWeapon, IHaveCooldown
         return Cooldown == 0;
     }
 
-    public void Shoot(IEntity target)
+    public void Shoot(IEntity target, IStatModifierService modifierService)
     {
         target.DealDamage(Damage);
-        Cooldown = _baseCooldown;
+
+        var reduceCooldownPercent = modifierService.GetAppliableModifierValue<WeaponCooldownReduce>();
+        Cooldown = _baseCooldown * (1 - reduceCooldownPercent);
     }
 
-    public void Update(float dt, IStatModifierService modifierService)
+    public void Update(float dt)
     {
         if (Cooldown > 0)
         {
-            var reducePercent = modifierService.GetAppliableModifierValue<WeaponCooldownReduce>();
-            Cooldown -= dt * (1 + reducePercent);
+            var reduceInSec = 1;
+            Cooldown -= dt * reduceInSec;
         }
 
         Cooldown = Math.Clamp(Cooldown, 0, Math.Abs(Cooldown));

@@ -11,7 +11,7 @@
         return false;
     }
 
-    public void Shoot(IEntity target)
+    public void Shoot(IEntity target, IStatModifierService modifierService)
     {
         return;
     }

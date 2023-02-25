@@ -28,7 +28,7 @@ public class AggressiveBehaviour
         foreach (var weapon in _spaceShip.Weapons.Where(weapon => weapon.CanShoot()))
         {
             Debug.Log($"{_spaceShip} shoot to {Target} from {weapon} weapon");
-            weapon.Shoot(Target);
+            weapon.Shoot(Target, _spaceShip.ModificatorService);
         }
     }
 
